@@ -10,10 +10,10 @@ class UserKnowledge extends Model
     use HasFactory;
     protected $fillable = [
         'knowledge_name',
-        'perecent_know',
+        'percent_know',
         'user_id'
     ];
-    
+
     public function users()
     {
         return $this->belongsTo(User::class, 'id');

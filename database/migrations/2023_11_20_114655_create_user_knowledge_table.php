@@ -12,7 +12,7 @@ return new class extends Migration
         Schema::create('user_knowledge', function (Blueprint $table) {
             $table->id();
             $table->string('knowledge_name');
-            $table->string('perecent_know');
+            $table->string('percent_know');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });

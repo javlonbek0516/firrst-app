@@ -37,7 +37,6 @@ Route::group(
     }
 );
 
-
 Route::resource('project', ProjectController::class)->only([
     'index', 'show'
 ]);

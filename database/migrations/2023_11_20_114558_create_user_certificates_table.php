@@ -9,13 +9,13 @@ return new class extends Migration
 
     public function up(): void
     {
-        Schema::create('user_certficates', function (Blueprint $table) {
+        Schema::create('user_certificates', function (Blueprint $table) {
             $table->id();
-            $table->string('link_certficate');
-            $table->string('image_certficate');
-            $table->string('company_certficate');
+            $table->string('link_certificate');
+            $table->string('image_certificate');
+            $table->string('company_certificate');
             $table->date('date_reached');
-            $table->string('expirece_date');
+            $table->string('expire_date');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('user_certficates');
+        Schema::dropIfExists('user_certificates');
     }
 };

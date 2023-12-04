@@ -10,7 +10,7 @@ class  RegisterRequest extends FormRequest
     {
         return true;
     }
-    public function  rules()
+    public function  rules(): array
     {
         return [
             'username' => 'required|string|max:255|unique:users',
@@ -18,7 +18,7 @@ class  RegisterRequest extends FormRequest
             'email' => 'required|string|max:255|email|unique:users',
             'phone_number' => 'required|int|unique:users',
             'image' => 'required|image|image|max:2048|mimes:jpeg,png',
-            'fullname' => 'required|string'
+            'full_name' => 'required|string'
         ];
     }
 }

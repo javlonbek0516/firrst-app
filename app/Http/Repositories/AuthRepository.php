@@ -21,7 +21,7 @@ class AuthRepository implements AuthInterface
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'image' =>  $filePath,
-            'fullname' => $request->fullname,
+            'full_name' => $request->full_name,
         ]);
 
         $token = $user->createToken('auth-token')->plainTextToken;

@@ -14,7 +14,7 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
-        'fullname',
+        'full_name',
         'image',
         'phone_number'
     ];
@@ -29,6 +29,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+
+
     public function socialAccount()
     {
         return $this->hasMany(SocialAccountUser::class);
@@ -41,7 +43,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Project::class);
     }
-    
+
     public function aboutUser()
     {
         return $this->hasOne(AboutUser::class);
